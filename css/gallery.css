@@ -1,0 +1,177 @@
+:root {
+    --bg-body: #050814;
+    /* section / footer / nav bg ke liye */
+    --card-bg: #0e1224;
+    --accent: #06b6d4;
+    --muted: #9fbccf;
+}
+
+/* ===== Body & Main ===== */
+html,
+body {
+    height: 100%;
+    background: var(--bg-body);
+    /* 👈 transparent so particles visible */
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+.site-main {
+    padding-top: calc(var(--nav-height, 76px) + 18px);
+    background: transparent;
+    /* 👈 no solid bg */
+}
+
+/* ===== Particles ===== */
+#tsparticles {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    /* 👈 always behind */
+    pointer-events: none;
+    /* 👈 no blocking clicks */
+}
+
+/* ===== Filter Buttons ===== */
+.anu-gallery-btn {
+    display: inline-block;
+    padding: .5rem .9rem;
+    border-radius: 999px;
+    border: 1px solid rgba(6, 182, 212, 0.22);
+    color: #bfeff6;
+    background: transparent;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .18s ease;
+}
+
+.anu-gallery-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(6, 182, 212, 0.06);
+}
+
+.anu-gallery-active {
+    background: var(--accent);
+    color: #001;
+    box-shadow: 0 8px 30px rgba(6, 182, 212, 0.14);
+}
+
+/* ===== Gallery Items ===== */
+.anu-gallery-item {
+    background: var(--card-bg);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(2, 6, 23, 0.6);
+    cursor: pointer;
+    transition: transform .25s ease, box-shadow .25s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.anu-gallery-item img {
+    width: 100%;
+    height: 14.5rem;
+    object-fit: cover;
+    display: block;
+    transition: transform .45s cubic-bezier(.2, .8, .3, 1);
+}
+
+.anu-gallery-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(2, 6, 23, 0.7);
+}
+
+.anu-gallery-item:hover img {
+    transform: scale(1.06);
+}
+
+/* ===== Caption ===== */
+.caption {
+    padding: .6rem;
+    font-size: .9rem;
+    color: #dbeaf0;
+    text-align: center;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.01), rgba(0, 0, 0, 0.02));
+}
+
+/* ===== Lightbox ===== */
+.gallery-lightbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.92);
+    z-index: 1200;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .18s ease;
+}
+
+.gallery-lightbox[aria-hidden="false"],
+.gallery-lightbox.open {
+    visibility: visible;
+    opacity: 1;
+}
+
+.gallery-lightbox img {
+    max-width: 92%;
+    max-height: 62vh;
+    border-radius: 8px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.7);
+}
+
+/* ===== Lightbox Controls ===== */
+.lightbox-close {
+    position: absolute;
+    top: 22px;
+    right: 26px;
+    font-size: 32px;
+    color: #fff;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.lightbox-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 34px;
+    background: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    padding: 0.5rem;
+    user-select: none;
+}
+
+#anu-gallery-prev {
+    left: 18px;
+}
+
+#anu-gallery-next {
+    right: 18px;
+}
+
+/* ===== Utility ===== */
+.hidden {
+    display: none !important;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 640px) {
+    .anu-gallery-item img {
+        height: 11.5rem;
+    }
+
+    .anu-brand-title {
+        font-size: .95rem;
+    }
+
+    .site-main {
+        padding-top: calc(var(--nav-height, 76px) + 12px);
+    }
+}
