@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Credits — Designer & Details</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Poppins:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- tsParticles CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+            position: relative;
+            background: #000;
+            /* Black background */
+        }
+
+        /* Floating Logo */
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-16px);
+            }
+        }
+
+        .animate-float {
+            animation: float 4s ease-in-out infinite;
+        }
+
+        /* Slide animations */
+        @keyframes slideFromLeft {
+            0% {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .animate-slideFromLeft {
+            animation: slideFromLeft 1s ease-out forwards;
+        }
+
+        @keyframes slideFromRight {
+            0% {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .animate-slideFromRight {
+            animation: slideFromRight 1s ease-out forwards;
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fadeInUp {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+
+        @keyframes fadeInLeft {
+            0% {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .animate-fadeInLeft {
+            animation: fadeInLeft 0.6s ease-out forwards;
+        }
+
+        /* Blur background when modal is open */
+        .modal-open #mainContent {
+            filter: blur(6px);
+            transition: filter 0.3s ease;
+        }
+
+        /* Particle canvas full screen */
+        #pageParticles,
+        #modalParticles {
+            position: fixed;
+            inset: 0;
+            z-index: -10;
+        }
+
+        #modalParticles {
+            z-index: 0;
+        }
+    </style>
+</head>
+
+<body class="text-gray-100">
+
+    <!-- FULL PAGE PARTICLE BACKGROUND -->
+    <div id="pageParticles"></div>
+
+    <!-- HERO -->
+    <header class="flex flex-col md:flex-row items-center justify-between px-6 md:px-12 py-16 gap-10 relative z-10">
+        <div class="md:max-w-lg space-y-4 animate-slideFromLeft">
+            <h2 class="text-blue-400 font-bold text-sm md:text-base tracking-wide">Website Designed & Built by</h2>
+            <h1 class="font-orbitron text-3xl md:text-5xl text-white">Om Kumar</h1>
+            <p class="text-gray-300">Full-Stack Developer & UI/UX Designer — B.Tech (CSE - Data Science) | Government
+                Engineering College, Sheohar.</p>
+            <div class="flex flex-wrap gap-4">
+                <a href="#contact"
+                    class="px-6 py-3 rounded-full font-bold bg-gradient-to-br from-blue-600 to-blue-400 shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all">Contact
+                    Designer</a>
+                <a href="#details"
+                    class="px-6 py-3 rounded-full font-bold border border-white/20 text-gray-200 hover:text-white transition-colors">Project
+                    Details</a>
+            </div>
+        </div>
+        <div class="animate-slideFromRight">
+            <!-- Bigger logo -->
+            <img src="../media/websitelogo.png" alt="Site Logo" class="w-52 md:w-[28rem] rounded-xl shadow-lg animate-float">
+        </div>
+    </header>
+
+    <!-- MAIN -->
+    <main id="mainContent" class="max-w-7xl mx-auto px-6 md:px-12 py-12 relative z-10">
+        <section
+            class="bg-gray-900 border border-blue-900 rounded-xl p-8 shadow-xl grid md:grid-cols-[300px_1fr] gap-8">
+            <!-- PROFILE -->
+            <aside class="flex flex-col md:items-center md:text-center gap-4">
+                <img id="profilePic" src="../media/me.png" alt="Om Kumar — Designer"
+                    class="w-32 h-32 md:w-44 md:h-44 object-cover rounded-lg border-2 border-blue-400 hover:scale-105 transition-transform cursor-pointer">
+                <div>
+                    <h3 class="text-lg font-semibold">Om Kumar</h3>
+                    <p class="text-gray-300 text-sm">3rd year B.Tech (CSE - Data Science)</p>
+                </div>
+            </aside>
+
+            <!-- DETAILS -->
+            <div class="space-y-6">
+                <h4 id="details" class="text-blue-400 font-semibold text-lg">Project — Website Credits</h4>
+                <p><strong>Role:</strong> Designer & Developer — frontend, responsive layout, backend scaffold (Node.js
+                    + MongoDB).</p>
+
+                <h4 class="text-blue-400 font-semibold text-lg">Technologies & Tools</h4>
+                <div class="flex flex-wrap gap-2">
+                    <span class="bg-white/5 py-1 px-3 rounded-full text-sm font-medium">HTML5</span>
+                    <span class="bg-white/5 py-1 px-3 rounded-full text-sm font-medium">CSS3</span>
+                    <span class="bg-white/5 py-1 px-3 rounded-full text-sm font-medium">JavaScript</span>
+                    <span class="bg-white/5 py-1 px-3 rounded-full text-sm font-medium">Node.js</span>
+                    <span class="bg-white/5 py-1 px-3 rounded-full text-sm font-medium">MongoDB</span>
+                    <span class="bg-white/5 py-1 px-3 rounded-full text-sm font-medium">Tailwind</span>
+                    <span class="bg-white/5 py-1 px-3 rounded-full text-sm font-medium">Particle.js</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- MODAL -->
+    <div id="imgModal"
+        class="hidden fixed inset-0 z-50 flex justify-center items-start pt-16 overflow-auto bg-black/70">
+        <!-- Particle background inside modal -->
+        <div id="modalParticles"></div>
+
+        <div class="relative flex flex-col md:flex-row gap-6 max-w-6xl w-full z-10">
+            <!-- Close button -->
+            <button id="closeModal"
+                class="absolute top-4 right-4 text-3xl font-bold text-white hover:text-blue-400 transform hover:scale-125 transition-all z-50">&times;</button>
+
+            <!-- Left Image -->
+            <div class="flex-shrink-0 md:sticky top-20 animate-fadeInLeft self-start">
+                <img src="../media/me.png" alt="Om Kumar - Full Image"
+                    class="rounded-lg w-64 md:w-80 object-cover shadow-lg">
+            </div>
+
+            <!-- Right Transparent Details (Scrollable) -->
+            <div
+                class="space-y-6 text-gray-100 bg-white/10 backdrop-blur-md p-6 rounded-lg overflow-y-auto max-h-[80vh] animate-fadeInUp">
+                <h3 class="text-2xl font-bold text-blue-400">Om Kumar</h3>
+                <p class="text-gray-300 italic">"Turning ideas into experiences — coding, designing, and innovating with
+                    passion."</p>
+
+                <h4 class="text-blue-400 font-semibold">Core Strengths 💡</h4>
+                <ul class="list-disc list-inside space-y-1 text-gray-200">
+                    <li>Full-Stack Development: Building responsive & scalable web apps.</li>
+                    <li>UI/UX Design: Crafting user-centric, aesthetic interfaces.</li>
+                    <li>Problem-Solving: Strong DSA and algorithmic skills.</li>
+                    <li>Creative Coding: Adding life to projects with animations & interactive effects.</li>
+                </ul>
+
+                <h4 class="text-blue-400 font-semibold">Passion Projects 🚀</h4>
+                <div class="flex flex-wrap gap-2">
+                    <span class="bg-white/5 py-1 px-3 rounded-full text-sm font-medium">Interactive Portfolios</span>
+                    <span class="bg-white/5 py-1 px-3 rounded-full text-sm font-medium">Web Animations</span>
+                    <span class="bg-white/5 py-1 px-3 rounded-full text-sm font-medium">Game UI/UX</span>
+                    <span class="bg-white/5 py-1 px-3 rounded-full text-sm font-medium">AI Chatbots</span>
+                    <span class="bg-white/5 py-1 px-3 rounded-full text-sm font-medium">Data-Driven Apps</span>
+                </div>
+
+                <h4 class="text-blue-400 font-semibold">Why I Code ❤️</h4>
+                <p class="text-gray-200 italic">"I believe technology can inspire and connect people. Every project is
+                    an opportunity to learn, innovate, and create something memorable."</p>
+
+                <h4 class="text-blue-400 font-semibold">Let's Connect 🌐</h4>
+                <div class="flex flex-wrap gap-4">
+                    <a href="mailto:omkumar00116@gmail.com"
+                        class="px-6 py-2 rounded-full bg-gradient-to-br from-blue-600 to-blue-400 font-bold shadow hover:shadow-xl transition-all">Email</a>
+                    <a href="https://www.linkedin.com" target="_blank"
+                        class="px-6 py-2 rounded-full border border-white/20 text-gray-200 hover:text-white transition-colors">LinkedIn</a>
+                    <a href="https://github.com" target="_blank"
+                        class="px-6 py-2 rounded-full border border-white/20 text-gray-200 hover:text-white transition-colors">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const modal = document.getElementById('imgModal');
+        const profilePic = document.getElementById('profilePic');
+        const closeBtn = document.getElementById('closeModal');
+
+        // Common particle config
+        const particleConfig = {
+            background: { color: { value: "#000000" } },
+            fpsLimit: 60,
+            particles: {
+                number: { value: 70, density: { enable: true, area: 900 } },
+                color: { value: "#00b4ff" },
+                shape: { type: "circle" },
+                opacity: { value: 0.8, random: { enable: true, minimumValue: 0.25 }, animation: { enable: true, speed: 1, minimumValue: 0.2 } },
+                size: { value: { min: 2, max: 6 }, random: true, animation: { enable: true, speed: 4, minimumValue: 0.2 } },
+                links: { enable: true, distance: 160, color: "#00b4ff", opacity: 0.18, width: 1.2 },
+                move: { enable: true, speed: 2.2, direction: "none", random: true, straight: false, outModes: { default: "out" } }
+            },
+            interactivity: {
+                detectsOn: "canvas",
+                events: {
+                    onHover: { enable: true, mode: "repulse" },
+                    onClick: { enable: true, mode: "push" },
+                    resize: true
+                },
+                modes: {
+                    repulse: { distance: 180, duration: 0.6 },
+                    push: { quantity: 4 }
+                }
+            },
+            detectRetina: true
+        };
+
+        // Page particles
+        tsParticles.load("pageParticles", particleConfig);
+
+        // Open modal
+        profilePic.addEventListener('click', () => {
+            modal.classList.remove('hidden');
+            document.body.classList.add('modal-open');
+            tsParticles.load("modalParticles", particleConfig);
+        });
+
+        // Close modal
+        const closeModal = () => {
+            modal.classList.add('hidden');
+            document.body.classList.remove('modal-open');
+            tsParticles.domItem(1)?.destroy(); // destroy modal particles instance
+        }
+
+        closeBtn.addEventListener('click', closeModal);
+        modal.addEventListener('click', closeModal);
+        modal.querySelector('div.relative').addEventListener('click', e => e.stopPropagation());
+    </script>
+
+</body>
+
+</html>

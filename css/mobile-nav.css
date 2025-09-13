@@ -1,0 +1,64 @@
+/* ===== Overlay ===== */
+.anu-nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(8, 12, 18, 0.85);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 2000;
+}
+
+.anu-nav-overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ===== Mobile nav ===== */
+.anu-mobile-nav {
+    position: fixed;
+    top: 50%;
+    right: -300px;
+    width: 250px;
+    height: 60%;
+    background: #0d0d1a;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    gap: 2rem;
+    transition: right 0.5s ease;
+    z-index: 2001;
+    overflow: hidden;
+    border-radius: 8px;
+    transform: translateY(-50%);
+}
+
+.anu-mobile-nav.open {
+    right: 10px;
+}
+
+/* Links inside */
+.anu-mobile-link {
+    color: #e9eef6;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2rem;
+    opacity: 0;
+    transform: translateX(30px);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.anu-mobile-link[data-shown="1"] {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.anu-mobile-link:hover {
+    color: #00b4ff;
+}
