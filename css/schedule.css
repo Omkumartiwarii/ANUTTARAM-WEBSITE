@@ -1,139 +1,430 @@
+    /* ===== Body Styles ===== */
+    body {
+        background-color: #000000;
+        color: #e0e0e0;
+        font-family: 'Roboto Mono', monospace;
+        margin: 0;
+        padding: 0;
+    }
 
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: #000000;
-            color: #e4e9f7;
-            padding-top: 120px;
-            line-height: 1.6;
+    /* ===== Container ===== */
+    .an25-container {
+        max-width: 1100px;
+        margin: 50px auto;
+        margin-top: 150px;
+        padding: 0 20px;
+    }
+
+    .an25-heading {
+        font-size: 2.5rem;
+        color: #ffffff;
+        margin-bottom: 5px;
+    }
+
+    .an25-subtitle {
+        color: #999;
+        margin-bottom: 40px;
+    }
+
+    .an25-day-heading {
+        color: #f9f9f9;
+        margin: 40px 0 20px 0;
+        border-bottom: 1px solid #333;
+        padding-bottom: 5px;
+    }
+
+    .an25-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 40px;
+    }
+
+    .an25-table th,
+    .an25-table td {
+        padding: 12px 15px;
+        text-align: left;
+    }
+
+    .an25-table th {
+        background-color: #1a1c2b;
+    }
+
+    .an25-table tr {
+        border-bottom: 1px solid #333;
+    }
+
+    .an25-table tr:hover {
+        background-color: #1f2233;
+    }
+
+    .an25-table td:first-child {
+        width: 150px;
+        color: #999;
+    }
+
+    .an25-table td:nth-child(2) {
+        font-weight: 500;
+    }
+
+    .an25-table td:nth-child(3),
+    .an25-table td:nth-child(4) {
+        width: 80px;
+        color: #999;
+    }
+
+    /* ===== Anuttaram Nav Styles (Desktop) ===== */
+    .anu-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 85px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 12px clamp(1rem, 3.5vw, 3.5rem);
+        z-index: 2001;
+        background: rgba(8, 12, 18, 0.55);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+        backdrop-filter: blur(4px);
+    }
+
+    /* Brand */
+    .anu-brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .anu-brand-img {
+        width: clamp(44px, 4.5vw, 80px);
+        height: clamp(44px, 4.5vw, 80px);
+        aspect-ratio: 1/1;
+        object-fit: cover;
+        border-radius: 50%;
+        box-shadow: 0 4px 18px rgba(0, 180, 255, 0.12);
+    }
+
+    .anu-brand-title {
+        font-family: "Orbitron", sans-serif;
+        font-size: clamp(0.9rem, 1.6vw, 1.9rem);
+        color: #0ea2e2;
+        letter-spacing: 0.6px;
+        text-transform: uppercase;
+    }
+
+    /* Desktop nav list */
+    .anu-nav-list {
+        display: flex;
+        gap: 1.5rem;
+        list-style: none;
+        align-items: center;
+    }
+
+    .anu-nav-link {
+        color: #e9eef6;
+        text-decoration: none;
+        font-weight: 600;
+        position: relative;
+        padding: 6px 2px;
+        transition: color 0.22s ease;
+    }
+
+    .anu-nav-link::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -6px;
+        width: 0;
+        height: 2px;
+        background: #00b4ff;
+        transition: width 0.28s ease;
+    }
+
+    .anu-nav-link:hover {
+        color: #00b4ff;
+    }
+
+    .anu-nav-link:hover::after {
+        width: 100%;
+    }
+
+    /* Nav right */
+    .anu-nav-right {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+    }
+
+    /* Countdown show/hide */
+    @media (max-width: 768px) {
+        .anu-countdown-nav {
+            display: none !important;
+        }
+    }
+
+    @media (min-width: 769px) {
+        .anu-countdown-nav {
+            display: block;
+            color: #e9eef6;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+    }
+
+    /* Hamburger button (desktop hidden) */
+    .anu-hamburger {
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 28px;
+        height: 22px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        z-index: 3000;
+    }
+
+    .anu-hamburger span {
+        display: block;
+        height: 3px;
+        width: 100%;
+        background: #e9eef6;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+        transform-origin: center;
+    }
+
+    .anu-hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .anu-hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .anu-hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .anu-nav-list {
+            display: none;
         }
 
-        .anu-schedule-title {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 32px;
-            color: #00ffe7;
+        .anu-hamburger {
+            display: flex;
+        }
+    }
+
+    /* ===== Overlay ===== */
+    .anu-nav-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(8, 12, 18, 0.85);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        z-index: 2000;
+    }
+
+    .anu-nav-overlay.show {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /* ===== Mobile nav ===== */
+    .anu-mobile-nav {
+        position: fixed;
+        top: 50%;
+        right: -300px;
+        width: 250px;
+        height: 60%;
+        background: #0d0d1a;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+        gap: 2rem;
+        transition: right 0.5s ease;
+        z-index: 2001;
+        overflow: hidden;
+        border-radius: 8px;
+        transform: translateY(-50%);
+    }
+
+    .anu-mobile-nav.open {
+        right: 10px;
+    }
+
+    /* Links inside */
+    .anu-mobile-link {
+        color: #e9eef6;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1.2rem;
+        opacity: 0;
+        transform: translateX(30px);
+        transition: all 0.3s ease;
+        position: relative;
+    }
+
+    .anu-mobile-link[data-shown="1"] {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .anu-mobile-link:hover {
+        color: #00b4ff;
+    }
+
+    /* ===== Footer Styles ===== */
+    .site-footer {
+        background: rgba(0, 0, 0, 0.35);
+        /* Transparent gradient */
+        color: #e0e0e0;
+        font-family: 'Roboto Mono', monospace;
+        padding: 50px 25px 20px 25px;
+        margin-top: 60px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* Glow overlay for uniqueness */
+    .site-footer::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(circle at center, rgba(0, 180, 255, 0.08), transparent 70%);
+        animation: footerGlow 8s infinite alternate;
+        z-index: 0;
+    }
+
+    @keyframes footerGlow {
+        from {
+            transform: rotate(0deg) scale(1);
+        }
+
+        to {
+            transform: rotate(360deg) scale(1.2);
+        }
+    }
+
+    /* Main Footer Section */
+    .footer-main {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 35px;
+        margin-bottom: 30px;
+        position: relative;
+        z-index: 1;
+    }
+
+    /* Footer Column */
+    .footer-col h6 {
+        font-size: 1.1rem;
+        margin-bottom: 14px;
+        color: #00b4ff;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    .footer-col h6:hover {
+        color: #66d9ff;
+        transform: translateY(-2px);
+    }
+
+    .footer-col p,
+    .footer-col a {
+        font-size: 0.9rem;
+        line-height: 1.7;
+        color: #cfd8e3;
+        text-decoration: none;
+        transition: color 0.3s ease, transform 0.2s ease;
+        position: relative;
+    }
+
+    /* Hover underline animation */
+    .footer-col a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -3px;
+        width: 0;
+        height: 2px;
+        background: #00b4ff;
+        transition: width 0.3s ease;
+    }
+
+    .footer-col a:hover::after {
+        width: 100%;
+    }
+
+    .footer-col a:hover,
+    .footer-col p:hover {
+        color: #00b4ff;
+        transform: translateX(3px);
+    }
+
+    /* Social Links */
+    .social-links {
+        display: flex;
+        gap: 18px;
+    }
+
+    .social-links a {
+        font-size: 1.4rem;
+        color: #cfd8e3;
+        transition: color 0.3s ease, transform 0.25s ease, text-shadow 0.3s ease;
+    }
+
+    .social-links a:hover {
+        color: #00b4ff;
+        transform: scale(1.25) rotate(8deg);
+        text-shadow: 0 0 12px rgba(0, 180, 255, 0.6);
+    }
+
+    /* Footer Bottom */
+    .footer-bottom {
+        text-align: center;
+        font-size: 0.85rem;
+        padding-top: 15px;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        color: #aaa;
+        position: relative;
+        z-index: 1;
+        transition: color 0.3s ease;
+    }
+
+    .footer-bottom:hover {
+        color: #e0e0e0;
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 600px) {
+        .footer-main {
+            grid-template-columns: 1fr;
             text-align: center;
-            margin-bottom: 10px;
         }
 
-        .anu-schedule-sub {
-            text-align: center;
-            margin-bottom: 40px;
-            color: #9aa2b2;
-            font-size: 15px;
+        .social-links {
+            justify-content: center;
         }
 
-        .anu-schedule-day {
-            margin-bottom: 50px;
-        }
-
-        .anu-schedule-day h2 {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 22px;
-            color: #fff;
-            margin-bottom: 20px;
-            position: relative;
+        .footer-col a,
+        .footer-col p {
             display: inline-block;
         }
-
-        .anu-schedule-day h2::after {
-            content: "";
-            position: absolute;
-            bottom: -6px;
-            left: 0;
-            width: 100%;
-            height: 3px;
-            background: linear-gradient(90deg, #00ffe7, #ff00ff);
-            animation: anu-glowline 2s infinite alternate;
-        }
-
-        @keyframes anu-glowline {
-            from {
-                box-shadow: 0 0 6px #00ffe7;
-            }
-
-            to {
-                box-shadow: 0 0 12px #ff00ff;
-            }
-        }
-
-        .anu-schedule-table {
-            width: 100%;
-            border-collapse: collapse;
-            border-radius: 12px;
-            overflow: hidden;
-            background: rgba(20, 24, 41, 0.8);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 0 15px rgba(0, 234, 255, 0.15);
-        }
-
-        .anu-schedule-table th,
-        .anu-schedule-table td {
-            padding: 14px 16px;
-            text-align: left;
-        }
-
-        .anu-schedule-table th {
-            background: rgba(29, 33, 54, 0.9);
-            color: #00ffe7;
-            font-weight: 600;
-            font-size: 14px;
-            text-transform: uppercase;
-        }
-
-        .anu-schedule-table td {
-            border-bottom: 1px solid rgba(42, 47, 69, 0.6);
-            font-size: 14px;
-            transition: all 0.3s ease;
-        }
-
-        .anu-schedule-table tr:last-child td {
-            border-bottom: none;
-        }
-
-        .anu-schedule-table tbody tr:hover td {
-            background: rgba(0, 255, 231, 0.05);
-            transform: scale(1.01);
-            box-shadow: inset 0 0 10px rgba(0, 255, 231, 0.3);
-            color: #fff;
-        }
-
-        @media (max-width: 768px) {
-
-            .anu-schedule-table,
-            .anu-schedule-table thead,
-            .anu-schedule-table tbody,
-            .anu-schedule-table th,
-            .anu-schedule-table td,
-            .anu-schedule-table tr {
-                display: block;
-                width: 100%;
-            }
-
-            .anu-schedule-table thead {
-                display: none;
-            }
-
-            .anu-schedule-table tr {
-                margin-bottom: 18px;
-                border-radius: 10px;
-                background: rgba(20, 24, 41, 0.85);
-                box-shadow: 0 0 10px rgba(0, 255, 231, 0.2);
-                padding: 12px;
-            }
-
-            .anu-schedule-table td {
-                border: none;
-                font-size: 13px;
-                display: flex;
-                justify-content: space-between;
-                padding: 8px 6px;
-            }
-
-            .anu-schedule-table td::before {
-                content: attr(data-label);
-                font-weight: 600;
-                color: #00ffe7;
-                flex-basis: 45%;
-                text-align: left;
-            }
-        }
+    }
