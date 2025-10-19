@@ -1,0 +1,135 @@
+/* ===== Contact Page Scope ===== */
+.contact-page {
+    font-family: 'Poppins', sans-serif;
+    background-color: #000;
+    color: #e0e0e0;
+    position: relative;
+}
+
+/* ===== Particles Background ===== */
+#tsparticles {
+    position: absolute;  /* changed from fixed */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none; /* allows clicks and scrolls through it */
+}
+
+/* ===== Contact Section ===== */
+.contact-section-wrapper {
+    position: relative;
+    z-index: 1; /* bring above particles */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 20px 60px 20px;
+    text-align: center;
+}
+
+.contact-section-wrapper .contact-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.contact-section-wrapper .contact-subtitle {
+    font-size: 1.2rem;
+    color: #a0a0a0;
+    margin-bottom: 60px;
+}
+
+/* ===== Contact Grid ===== */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+
+@media (min-width: 600px) {
+    .contact-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .contact-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* ===== Contact Cards ===== */
+.contact-card {
+    background-color: #2a2a3f;
+    padding: 40px 20px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: scale(1.05);
+}
+
+/* Unique Shadow Colors for Each Card */
+.email-card:hover {
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.5);
+}
+
+.phone-card:hover {
+    box-shadow: 0 8px 25px rgba(34, 197, 94, 0.5);
+}
+
+.location-card:hover {
+    box-shadow: 0 8px 25px rgba(234, 179, 8, 0.5);
+}
+
+.social-card:hover {
+    box-shadow: 0 8px 25px rgba(236, 72, 153, 0.5);
+}
+
+/* ===== Card Content ===== */
+.contact-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.contact-card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.contact-card p {
+    font-size: 1rem;
+    color: #c0c0c0;
+}
+
+/* ===== Social Links ===== */
+.contact-card .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+    font-size: 1.5rem;
+}
+
+.contact-card .social-links a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-card .social-links a:nth-child(1):hover {
+    color: #3b82f6;
+    /* Blue */
+}
+
+.contact-card .social-links a:nth-child(2):hover {
+    color: #ec4899;
+    /* Pink */
+}
+
+.contact-card .social-links a:nth-child(3):hover {
+    color: #1d4ed8;
+    /* Dark Blue */
+}
