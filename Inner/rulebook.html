@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anuttaram 25 | Events Overview</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700&family=Poppins:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Custom CSS -->
+     <link rel="stylesheet" href="../css/rulebook.css">
+    <link rel="stylesheet" href="../css/particles.css">
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/mobile-nav.css">
+    <link rel="stylesheet" href="../css/countdown-timer.css">
+    <link rel="stylesheet" href="../css/footer.css">
+
+    
+</head>
+
+<body class="px-6 py-12">
+
+    <!-- particles container -->
+    <div id="tsparticles" aria-hidden="true"></div>
+
+    <!-- ===== Navigation ===== -->
+    <nav class="anu-nav">
+        <div class="anu-brand">
+            <img src="../media/Anu_Logo.png" alt="Anuttaram logo" class="anu-brand-img">
+            <h1 class="anu-brand-title">Anuttaram</h1>
+        </div>
+
+        <!-- Desktop nav -->
+        <ul class="anu-nav-list">
+            <li><a href="../index.html" class="anu-nav-link">Home</a></li>
+            <li><a href="about.html" class="anu-nav-link">About</a></li>
+            <li><a href="events.html" class="anu-nav-link">Events</a></li>
+            <li><a href="schedule.html" class="anu-nav-link">Schedule</a></li>
+            <li><a href="gallery.html" class="anu-nav-link">Gallery</a></li>
+            <li><a href="contact.html" class="anu-nav-link">Contact</a></li>
+            <li><a href="rulebook.html" class="always">Rulebook</a></li>
+            <li><a href="crew.html" class="anu-nav-link">Crew</a></li>
+        </ul>
+
+        <div class="anu-nav-right">
+            <div class="anu-countdown-nav" id="countdown-nav" aria-live="polite">Starts in: --</div>
+            <button class="anu-hamburger" aria-label="Open menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="anu-nav-overlay"></div>
+
+    <div class="anu-mobile-nav">
+        <a href="../index.html" class="anu-mobile-link" data-stagger="1">Home</a>
+        <a href="about.html" class="anu-mobile-link" data-stagger="2">About</a>
+        <a href="events.html" class="anu-mobile-link" data-stagger="3">Events</a>
+        <a href="schedule.html" class="anu-mobile-link" data-stagger="4">Schedule</a>
+        <a href="gallery.html" class="anu-mobile-link" data-stagger="5">Gallery</a>
+        <a href="contact.html" class="anu-mobile-link" data-stagger="6">Contact</a>
+        <a href="rulebook.html" class="mob-always" data-stagger="6">Rulebook</a>
+        <a href="crew.html" class="anu-mobile-link" data-stagger="7">Crew</a>
+    </div>
+
+    <!-- end mobile nav -->
+     <br><br><br>
+
+    <header class="text-center mb-12">
+        <h1 class="orbitron text-5xl md:text-6xl font-bold mb-4 text-white">Anuttaram 25 Events</h1>
+        <p class="text-gray-300 max-w-3xl mx-auto">Explore all competitions and view their official rulebooks. Click on
+            "View Rulebook" to read full details.</p>
+    </header>
+
+    <!-- Event Grid -->
+    <section class="event-grid">
+        <!-- Hackathon -->
+        <div class="event-card bg-gradient-hackathon">
+            <div>
+                <i class="fas fa-laptop-code event-icon"></i>
+                <h2 class="orbitron text-xl font-bold mb-2">Hackathon</h2>
+                <p class="mb-4">Build innovative solutions in a 24-hour coding marathon.</p>
+            </div>
+            <a href="../Rulebook/hackathon.html" class="gradient-button inline-block">View Rulebook</a>
+        </div>
+
+        <!-- Blind Coding -->
+        <div class="event-card bg-gradient-blindcoding">
+            <div>
+                <i class="fas fa-eye-slash event-icon"></i>
+                <h2 class="orbitron text-xl font-bold mb-2">Blind Coding</h2>
+                <p class="mb-4">Test your coding skills without looking at the screen.</p>
+            </div>
+            <a href="../rulebook/blindcoding.html" class="gradient-button inline-block">View Rulebook</a>
+        </div>
+
+        <!-- Debate -->
+        <div class="event-card bg-gradient-debate">
+            <div>
+                <i class="fas fa-comments event-icon"></i>
+                <h2 class="orbitron text-xl font-bold mb-2">Debate</h2>
+                <p class="mb-4">Showcase argumentation and critical thinking skills.</p>
+            </div>
+            <a href="../rulebook/debate.html" class="gradient-button inline-block">View Rulebook</a>
+        </div>
+
+        <!-- SA Writing -->
+        <div class="event-card bg-gradient-sa">
+            <div>
+                <i class="fas fa-pen-nib event-icon"></i>
+                <h2 class="orbitron text-xl font-bold mb-2">SA Writing</h2>
+                <p class="mb-4">Test creativity and writing skills with timed rounds.</p>
+            </div>
+            <a href="../rulebook/sa-writing.html" class="gradient-button inline-block">View Rulebook</a>
+        </div>
+
+        <!-- Quiz -->
+        <div class="event-card bg-gradient-quiz">
+            <div>
+                <i class="fas fa-lightbulb event-icon"></i>
+                <h2 class="orbitron text-xl font-bold mb-2">Quiz</h2>
+                <p class="mb-4">Compete in multiple rounds of rapid-fire and buzzer challenges.</p>
+            </div>
+            <a href="../rulebook/quiz.html" class="gradient-button inline-block">View Rulebook</a>
+        </div>
+
+        <!-- Speech -->
+        <div class="event-card bg-gradient-speech">
+            <div>
+                <i class="fas fa-microphone event-icon"></i>
+                <h2 class="orbitron text-xl font-bold mb-2">Speech</h2>
+                <p class="mb-4">Express your ideas confidently on stage with clarity and impact.</p>
+            </div>
+            <a href="../rulebook/speech.html" class="gradient-button inline-block">View Rulebook</a>
+        </div>
+
+        <!-- Robotics -->
+        <div class="event-card bg-gradient-robotics">
+            <div>
+                <i class="fas fa-robot event-icon"></i>
+                <h2 class="orbitron text-xl font-bold mb-2">Robotics</h2>
+                <p class="mb-4">Design, build, and compete with autonomous robots.</p>
+            </div>
+            <a href="robotics.html" class="gradient-button inline-block">View Rulebook</a>
+        </div>
+
+        <!-- AI Challenge -->
+        <div class="event-card bg-gradient-ai">
+            <div>
+                <i class="fas fa-brain event-icon"></i>
+                <h2 class="orbitron text-xl font-bold mb-2">AI Challenge</h2>
+                <p class="mb-4">Solve problems using AI and Machine Learning techniques.</p>
+            </div>
+            <a href="ai.html" class="gradient-button inline-block">View Rulebook</a>
+        </div>
+
+        <!-- IoT Challenge -->
+        <div class="event-card bg-gradient-iot">
+            <div>
+                <i class="fas fa-network-wired event-icon"></i>
+                <h2 class="orbitron text-xl font-bold mb-2">IoT Challenge</h2>
+                <p class="mb-4">Innovate with connected devices and smart solutions.</p>
+            </div>
+            <a href="iot.html" class="gradient-button inline-block">View Rulebook</a>
+        </div>
+
+        <!-- Cybersecurity -->
+        <div class="event-card bg-gradient-cybersecurity">
+            <div>
+                <i class="fas fa-shield-alt event-icon"></i>
+                <h2 class="orbitron text-xl font-bold mb-2">Cybersecurity</h2>
+                <p class="mb-4">Test your skills in ethical hacking and security challenges.</p>
+            </div>
+            <a href="cybersecurity.html" class="gradient-button inline-block">View Rulebook</a>
+        </div>
+
+        <!-- Web Development -->
+        <div class="event-card bg-gradient-webdev">
+            <div>
+                <i class="fas fa-code event-icon"></i>
+                <h2 class="orbitron text-xl font-bold mb-2">Web Development</h2>
+                <p class="mb-4">Build modern web applications using HTML, CSS, and JS frameworks.</p>
+            </div>
+            <a href="webdev.html" class="gradient-button inline-block">View Rulebook</a>
+        </div>
+    </section>
+    <br><br><br>
+
+    <!-- FOOTER -->
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="footer-main">
+            <div class="footer-col">
+                <h6>About</h6>
+                <p>We provide quality education and encourage students to participate in sports.</p>
+            </div>
+
+            <div class="footer-col">
+                <h6>Contacts</h6>
+                <p>Email: <a href="mailto:gecsheohar@gmail.com">gecsheohar@gmail.com</a></p>
+                <p>Phone: +91-1234567890</p>
+            </div>
+
+            <div class="footer-col">
+                <h6>Find Us On</h6>
+                <div class="social-links">
+                    <a href="https://x.com/gecsheohar" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.facebook.com/share/19nrqgAKTz/" target="_blank"><i
+                            class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/gec_sheohar" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://in.linkedin.com/in/omkumar00116" target="_blank"><i
+                            class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h6>Location</h6>
+                <p>
+                    Government Engineering College Sheohar,<br>
+                    Chhatauna Bisunpur, Block- Piprahi, Sheohar,<br>
+                    Bihar, Pin Code-843329<br>
+                    Mob- 09031085516
+                </p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            &copy; 2025 Government Engineering College Sheohar — All Rights Reserved.
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+    <script src="../js/particles.js"></script>
+    <script src="../js/mobile-nav.js"></script>
+    <script src="../js/countdown-timer.js"></script>
+
+</body>
+
+</html>

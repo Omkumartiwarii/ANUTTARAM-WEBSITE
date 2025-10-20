@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events | Anuttaram’25</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/events.css">
+    <link rel="stylesheet" href="../css/particles.css">
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/mobile-nav.css">
+    <link rel="stylesheet" href="../css/countdown-timer.css">
+    <link rel="stylesheet" href="../css/footer.css">
+
+    <!-- Particles CSS -->
+    <style>
+        #tsparticles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+            background: #0d0d0d;
+            overflow: hidden;
+            opacity: 0.8;
+            mix-blend-mode: screen;
+            transform: translateZ(0);
+        }
+    </style>
+</head>
+
+<body class="event-body">
+
+    <!-- Particles Background -->
+    <div id="tsparticles" aria-hidden="true"></div>
+
+    <!-- ===== Navigation ===== -->
+    <nav class="anu-nav">
+        <div class="anu-brand">
+            <img src="../media/Anu_Logo.png" alt="Anuttaram logo" class="anu-brand-img">
+            <h1 class="anu-brand-title">Anuttaram</h1>
+        </div>
+
+        <!-- Desktop nav -->
+        <ul class="anu-nav-list">
+            <li><a href="../index.html" class="anu-nav-link">Home</a></li>
+            <li><a href="about.html" class="anu-nav-link">About</a></li>
+            <li><a href="events.html" class="always">Events</a></li>
+            <li><a href="schedule.html" class="anu-nav-link">Schedule</a></li>
+            <li><a href="gallery.html" class="anu-nav-link">Gallery</a></li>
+            <li><a href="contact.html" class="anu-nav-link">Contact</a></li>
+            <li><a href="rulebook.html" class="anu-nav-link">Rulebook</a></li>
+            <li><a href="crew.html" class="anu-nav-link">Crew</a></li>
+        </ul>
+
+        <div class="anu-nav-right">
+            <div class="anu-countdown-nav" id="countdown-nav" aria-live="polite">Starts in: --</div>
+            <button class="anu-hamburger" aria-label="Open menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="anu-nav-overlay"></div>
+
+    <div class="anu-mobile-nav">
+        <a href="../index.html" class="anu-mobile-link" data-stagger="1">Home</a>
+        <a href="about.html" class="anu-mobile-link" data-stagger="2">About</a>
+        <a href="events.html" class="mob-always" data-stagger="3">Events</a>
+        <a href="schedule.html" class="anu-mobile-link" data-stagger="4">Schedule</a>
+        <a href="gallery.html" class="anu-mobile-link" data-stagger="5">Gallery</a>
+        <a href="contact.html" class="anu-mobile-link" data-stagger="6">Contact</a>
+        <a href="rulebook.html" class="anu-mobile-link" data-stagger="6">Rulebook</a>
+        <a href="crew.html" class="anu-mobile-link" data-stagger="7">Crew</a>
+    </div>
+
+    <!-- Header -->
+    <header class="event-header">
+        <h1>⚡ Events</h1>
+        <p>Explore the exciting events at Anuttaram’25</p>
+    </header>
+
+    <!-- Search & Filters -->
+    <div class="event-controls">
+        <input type="text" class="event-search" placeholder="Search events...">
+        <div class="event-filters">
+            <button class="event-filter-btn active" data-filter="all">All Events</button>
+            <button class="event-filter-btn" data-filter="Robotics">Robotics</button>
+            <button class="event-filter-btn" data-filter="Coding">Coding + Software</button>
+            <button class="event-filter-btn" data-filter="Presentation">Presentation</button>
+            <button class="event-filter-btn" data-filter="Gaming">Gaming</button>
+        </div>
+    </div>
+
+    <!-- Event Grid -->
+    <section class="event-grid">
+        <!-- Event Cards with proper Rule Book & Register links -->
+        <div class="event-card" data-category="Coding">
+            <img src="https://picsum.photos/400/200?random=11" class="event-image">
+            <div class="event-content">
+                <span class="event-tag">Coding</span>
+                <h3 class="event-title">MAD for CAD</h3>
+                <p class="event-details">18-20 Sept | CAD Lab | Team: 1 | Cash Prizes</p>
+            </div>
+            <div class="event-buttons">
+                <button class="event-btn rule"><a href="../rulebooks/mad-for-cad.pdf">Rule
+                        Book</a></button>
+                <button class="event-btn register"><a href="../register/mad-for-cad.html">Register</a></button>
+            </div>
+        </div>
+
+        <div class="event-card" data-category="Robotics">
+            <img src="https://picsum.photos/400/200?random=12" class="event-image">
+            <div class="event-content">
+                <span class="event-tag">Robotics</span>
+                <h3 class="event-title">RC Plane</h3>
+                <p class="event-details">18-20 Sept | Main Ground | Team: 2-5 | Cash Prizes</p>
+            </div>
+            <div class="event-buttons">
+                <button class="event-btn rule"><a href="../rulebooks/rc-plane.pdf">Rule
+                        Book</a></button>
+                <button class="event-btn register"><a href="../register/rc-plane.html">Register</a></button>
+            </div>
+        </div>
+
+        <div class="event-card" data-category="Gaming">
+            <img src="https://picsum.photos/400/200?random=13" class="event-image">
+            <div class="event-content">
+                <span class="event-tag">Gaming</span>
+                <h3 class="event-title">Dangal</h3>
+                <p class="event-details">18-20 Sept | Robotics Arena | Team: 3-5 | Cash Prizes</p>
+            </div>
+            <div class="event-buttons">
+                <button class="event-btn rule"><a href="../rulebooks/dangal.pdf">Rule Book</a></button>
+                <button class="event-btn register"><a href="../register/dangal.html">Register</a></button>
+            </div>
+        </div>
+
+        <div class="event-card" data-category="Coding">
+            <img src="https://picsum.photos/400/200?random=14" class="event-image">
+            <div class="event-content">
+                <span class="event-tag">Coding</span>
+                <h3 class="event-title">Debug Thugs</h3>
+                <p class="event-details">18-20 Sept | Comp Lab | Team: 1 | Cash Prizes</p>
+            </div>
+            <div class="event-buttons">
+                <button class="event-btn rule"><a href="../rulebooks/debug-thugs.pdf">Rule
+                        Book</a></button>
+                <button class="event-btn register"><a href="../register/debug-thugs.html">Register</a></button>
+            </div>
+        </div>
+
+        <div class="event-card" data-category="Robotics">
+            <img src="https://picsum.photos/400/200?random=15" class="event-image">
+            <div class="event-content">
+                <span class="event-tag">Robotics</span>
+                <h3 class="event-title">Line Tracer</h3>
+                <p class="event-details">18-20 Sept | Arena B | Team: 2-4 | Cash Prizes</p>
+            </div>
+            <div class="event-buttons">
+                <button class="event-btn rule"><a href="../rulebooks/line-tracer.pdf">Rule
+                        Book</a></button>
+                <button class="event-btn register"><a href="../register/line-tracer.html">Register</a></button>
+            </div>
+        </div>
+
+        <div class="event-card" data-category="Robotics">
+            <img src="https://picsum.photos/400/200?random=16" class="event-image">
+            <div class="event-content">
+                <span class="event-tag">Robotics</span>
+                <h3 class="event-title">Armstrong</h3>
+                <p class="event-details">18-20 Sept | Workshop | Team: 2-4 | Cash Prizes</p>
+            </div>
+            <div class="event-buttons">
+                <button class="event-btn rule"><a href="../rulebooks/armstrong.pdf">Rule
+                        Book</a></button>
+                <button class="event-btn register"><a href="../register/armstrong.html">Register</a></button>
+            </div>
+        </div>
+
+        <div class="event-card" data-category="Coding">
+            <img src="https://picsum.photos/400/200?random=17" class="event-image">
+            <div class="event-content">
+                <span class="event-tag">Coding</span>
+                <h3 class="event-title">Frontend Freebirds</h3>
+                <p class="event-details">18-20 Sept | Lab C | Team: 1-2 | Cash Prizes</p>
+            </div>
+            <div class="event-buttons">
+                <button class="event-btn rule"><a href="../rulebooks/frontend-freebirds.pdf">Rule
+                        Book</a></button>
+                <button class="event-btn register"><a href="../register/frontend-freebirds.html">Register</a></button>
+            </div>
+        </div>
+
+        <div class="event-card" data-category="Robotics">
+            <img src="https://picsum.photos/400/200?random=18" class="event-image">
+            <div class="event-content">
+                <span class="event-tag">Robotics</span>
+                <h3 class="event-title">Hurdle Mania</h3>
+                <p class="event-details">18-20 Sept | Arena C | Team: 2-4 | Cash Prizes</p>
+            </div>
+            <div class="event-buttons">
+                <button class="event-btn rule"><a href="../rulebooks/hurdle-mania.pdf">Rule
+                        Book</a></button>
+                <button class="event-btn register"><a href="../register/hurdle-mania.html">Register</a></button>
+            </div>
+        </div>
+
+        <div class="event-card" data-category="Gaming">
+            <img src="https://picsum.photos/400/200?random=19" class="event-image">
+            <div class="event-content">
+                <span class="event-tag">Gaming</span>
+                <h3 class="event-title">Seismic Design</h3>
+                <p class="event-details">18-20 Sept | Block B | Team: 3-5 | Cash Prizes</p>
+            </div>
+            <div class="event-buttons">
+                <button class="event-btn rule"><a href="../rulebooks/seismic-design.pdf">Rule
+                        Book</a></button>
+                <button class="event-btn register"><a href="../register/seismic-design.html">Register</a></button>
+            </div>
+        </div>
+
+        <div class="event-card" data-category="Presentation">
+            <img src="https://picsum.photos/400/200?random=20" class="event-image">
+            <div class="event-content">
+                <span class="event-tag">Presentation</span>
+                <h3 class="event-title">Tech Talk</h3>
+                <p class="event-details">18-20 Sept | Seminar Hall | Team: 1-2 | Cash Prizes</p>
+            </div>
+            <div class="event-buttons">
+                <button class="event-btn rule"><a href="../rulebooks/tech-talk.pdf">Rule
+                        Book</a></button>
+                <button class="event-btn register"><a href="../register/tech-talk.html">Register</a></button>
+            </div>
+        </div>
+
+        <div class="event-card" data-category="Presentation">
+            <img src="https://picsum.photos/400/200?random=21" class="event-image">
+            <div class="event-content">
+                <span class="event-tag">Presentation</span>
+                <h3 class="event-title">Startup Pitch</h3>
+                <p class="event-details">18-20 Sept | Auditorium | Team: 2-3 | Cash Prizes</p>
+            </div>
+            <div class="event-buttons">
+                <button class="event-btn rule"><a href="../rulebooks/startup-pitch.pdf">Rule
+                        Book</a></button>
+                <button class="event-btn register"><a href="../register/startup-pitch.html">Register</a></button>
+            </div>
+        </div>
+
+        <div class="event-card" data-category="Gaming">
+            <img src="https://picsum.photos/400/200?random=22" class="event-image">
+            <div class="event-content">
+                <span class="event-tag">Gaming</span>
+                <h3 class="event-title">E-Sports Arena</h3>
+                <p class="event-details">18-20 Sept | Hall A | Team: 2-5 | Cash Prizes</p>
+            </div>
+            <div class="event-buttons">
+                <button class="event-btn rule"><a href="../rulebooks/e-sports-arena.pdf">Rule
+                        Book</a></button>
+                <button class="event-btn register"><a href="../register/e-sports-arena.html">Register</a></button>
+            </div>
+        </div>
+    </section><br><br>
+
+    <!-- Footer -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="footer-main">
+            <div class="footer-col">
+                <h6>About</h6>
+                <p>We provide quality education and encourage students to participate in sports.</p>
+            </div>
+
+            <div class="footer-col">
+                <h6>Contacts</h6>
+                <p>Email: <a href="mailto:gecsheohar@gmail.com">gecsheohar@gmail.com</a></p>
+                <p>Phone: +91-1234567890</p>
+            </div>
+
+            <div class="footer-col">
+                <h6>Find Us On</h6>
+                <div class="social-links">
+                    <a href="https://x.com/gecsheohar" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.facebook.com/share/19nrqgAKTz/" target="_blank"><i
+                            class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/gec_sheohar" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://in.linkedin.com/in/omkumar00116" target="_blank"><i
+                            class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h6>Location</h6>
+                <p>
+                    Government Engineering College Sheohar,<br>
+                    Chhatauna Bisunpur, Block- Piprahi, Sheohar,<br>
+                    Bihar, Pin Code-843329<br>
+                    Mob- 09031085516
+                </p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            &copy; 2025 Government Engineering College Sheohar — All Rights Reserved.
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/events.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+    <script src="../js/particles.js"></script>
+    <script src="../js/mobile-nav.js"></script>
+    <script src="../js/countdown-timer.js"></script>
+</body>
+
+</html>
